@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Ichigo vs Monstros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="startScreen">
+    <button id="startBtn">Começar Jogo</button>
+  </div>
+
+  <section id="telaHistoria" class="tela tela-com-fundo" style="display: none;">
+  <img id="imagemHistoria" src="./IMG/Frame 1.png" alt="História 1" class="frame-historia" />
+  <button id="btnProximoFrame">Próximo...</button>
+  <button id="btnIniciarJogo" style="display: none;">Começar Jogo!</button>
+</section>
+
+  <canvas id="gameCanvas"></canvas>
+  <script src="game.js"></script>
+  <script>
+    window.onload = function() {
+      const startScreen = document.getElementById('startScreen');
+      const startBtn = document.getElementById('startBtn');
+      const canvas = document.getElementById('gameCanvas');
+      canvas.style.display = "none";
+
+      startBtn.onclick = () => {
+  startScreen.style.display = "none";
+  document.getElementById('telaHistoria').style.display = "flex";
+  // O resto já está no game.js: só depois de passar pelos frames a função window.startGame() será chamada!
+};
+    };
+  </script>
+</body>
+</html>
