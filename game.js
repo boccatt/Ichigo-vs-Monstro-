@@ -18,7 +18,7 @@ const dragonImg = new Image();
 dragonImg.src = "img/Dragão.png";
 
 const ichigoImg = new Image();
-ichigoImg.src = "img/ichigo.png";
+ichigoImg.src = "img/Ichigo.png";
 const attackImg = new Image();
 attackImg.src = "img/ataque.png";
 const specialImg = new Image();
